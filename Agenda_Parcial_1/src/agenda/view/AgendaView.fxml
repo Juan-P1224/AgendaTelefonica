@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agenda.controller.AgendaController">
+   <top>
+      <AnchorPane prefHeight="481.0" prefWidth="367.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableAgenda" layoutX="15.0" layoutY="235.0" prefHeight="200.0" prefWidth="339.0">
+              <columns>
+                <TableColumn fx:id="columnNombre" prefWidth="112.0" text="Nombre" />
+                <TableColumn fx:id="columnCorreo" prefWidth="126.0" text="Correo" />
+                  <TableColumn fx:id="columnTelefono" prefWidth="99.0" text="Telefono" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnEliminar" layoutX="158.0" layoutY="444.0" mnemonicParsing="false" onAction="#eliminarAction" text="Eliminar" />
+            <Button fx:id="btnAgregar" layoutX="286.0" layoutY="148.0" mnemonicParsing="false" onAction="#agregarAction" text="Agregar" />
+            <TextField fx:id="txtNombre" layoutX="98.0" layoutY="70.0" />
+            <TextField fx:id="txtEmail" layoutX="98.0" layoutY="111.0" />
+            <TextField fx:id="txtTelefono" layoutX="98.0" layoutY="151.0" />
+            <Text layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre contacto" />
+            <Text layoutX="1.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email contacto" />
+            <Text layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono contacto" />
+            <Separator layoutX="13.0" layoutY="185.0" prefHeight="5.0" prefWidth="337.0" />
+            <Text fill="#ce00ff" layoutX="106.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agenda Uniquindio">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtNombreBuscar" layoutX="98.0" layoutY="197.0" />
+            <Text layoutX="1.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre buscar" />
+            <Button fx:id="btnBuscar" layoutX="286.0" layoutY="197.0" mnemonicParsing="false" onAction="#buscarAction" prefHeight="25.0" prefWidth="56.0" text="Buscar" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
